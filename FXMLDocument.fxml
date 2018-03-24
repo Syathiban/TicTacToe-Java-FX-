@@ -30,39 +30,39 @@
          <children>
             <Label id="lb1" fx:id="lb1" alignment="CENTER" onMouseClicked="#clicked" prefHeight="226.0" prefWidth="134.0" textAlignment="JUSTIFY">
                <font>
-                  <Font size="36.0" />
+                  <Font name="Forte" size="36.0" />
                </font></Label>
             <Label id="lb2" fx:id="lb2" alignment="CENTER" onMouseClicked="#clicked" prefHeight="134.0" prefWidth="175.0" GridPane.columnIndex="1">
                <font>
-                  <Font size="36.0" />
+                  <Font name="Forte" size="36.0" />
                </font></Label>
             <Label id="lb8" fx:id="lb8" alignment="CENTER" onMouseClicked="#clicked" prefHeight="134.0" prefWidth="166.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
-                  <Font size="36.0" />
+                  <Font name="Forte" size="36.0" />
                </font></Label>
             <Label id="lb4" fx:id="lb4" alignment="CENTER" onMouseClicked="#clicked" prefHeight="134.0" prefWidth="136.0" GridPane.rowIndex="1">
                <font>
-                  <Font size="36.0" />
+                  <Font name="Forte" size="36.0" />
                </font></Label>
             <Label id="lb5" fx:id="lb5" alignment="CENTER" onMouseClicked="#clicked" prefHeight="186.0" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
-                  <Font size="36.0" />
+                  <Font name="Forte" size="36.0" />
                </font></Label>
             <Label id="lb3" fx:id="lb3" alignment="CENTER" onMouseClicked="#clicked" prefHeight="187.0" prefWidth="251.0" GridPane.columnIndex="2">
                <font>
-                  <Font size="36.0" />
+                  <Font name="Forte" size="36.0" />
                </font></Label>
             <Label id="lb6" fx:id="lb6" alignment="CENTER" onMouseClicked="#clicked" prefHeight="138.0" prefWidth="223.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
-                  <Font size="36.0" />
+                  <Font name="Forte" size="36.0" />
                </font></Label>
             <Label id="lb7" fx:id="lb7" alignment="CENTER" onMouseClicked="#clicked" prefHeight="151.0" prefWidth="165.0" GridPane.rowIndex="2">
                <font>
-                  <Font size="36.0" />
+                  <Font name="Forte" size="36.0" />
                </font></Label>
             <Label id="lb9" fx:id="lb9" alignment="CENTER" onMouseClicked="#clicked" prefHeight="141.0" prefWidth="193.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
-                  <Font size="36.0" />
+                  <Font name="Forte" size="36.0" />
                </font></Label>
          </children>
       </GridPane>
