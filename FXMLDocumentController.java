@@ -5,13 +5,18 @@
  */
 package tictactoe;
 
+import static com.sun.deploy.uitoolkit.ToolkitStore.dispose;
 import java.net.URL;
 import static java.sql.DriverManager.println;
 import java.util.Random;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Dialog;
 import javafx.scene.control.Label;
@@ -25,6 +30,9 @@ import javafx.scene.layout.BackgroundPosition;
 import javafx.scene.layout.BackgroundRepeat;
 import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javax.swing.JOptionPane;
 
 /**
@@ -36,8 +44,6 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Label lb1, lb2, lb3, lb4, lb5, lb6, lb7, lb8, lb9;
 
-    @FXML
-    private AnchorPane Anchor;
     
     private int zahl = 0;
 
@@ -46,8 +52,14 @@ public class FXMLDocumentController implements Initializable {
     private boolean isYourTurn = true;
 
     private Label[] labels = new Label[9];
+    @FXML
+    private GridPane gridpane;
+    @FXML
+    private Pane topbar;
 
-    
+     private double xOffset = 0;
+
+    private double yOffset = 0;
 
     @FXML
     private void clicked(MouseEvent event) {
@@ -171,9 +183,39 @@ public class FXMLDocumentController implements Initializable {
         
     }
     
+    @FXML
+    private void close(ActionEvent event) {
+        System.exit(0);
+    }
+
+    @FXML
+    private void minimize(ActionEvent event) {
+        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+
+        stage.setIconified(true);
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       
+         Stage stage = TicTacToe.getStage();
+
+        topbar.setOnMousePressed(new EventHandler<MouseEvent>() {
+
+            @Override
+            public void handle(MouseEvent event) {
+                xOffset = event.getSceneX();
+                yOffset = event.getSceneY();
+            }
+
+        });
+
+        topbar.setOnMouseDragged(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                stage.setX(event.getScreenX() - xOffset);
+                stage.setY(event.getScreenY() - yOffset);
+            }
+        });
         this.gamemode = Integer.parseInt(JOptionPane.showInputDialog("0 = SinglePlayer\n1= MultiPlayer"));
         labels[0] = lb1;
         labels[1] = lb2;
@@ -188,6 +230,14 @@ public class FXMLDocumentController implements Initializable {
         
         
     }
+
+    @FXML
+    private void restart(MouseEvent event) throws Exception {
+//        Stage stage = TicTacToe.getStage();
+//        TicTacToe tic = new TicTacToe();
+//        tic.start(stage);
+    }
+
  
    
 
