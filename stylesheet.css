@@ -37,10 +37,10 @@ and open the template in the editor.
 .button-submit {
     -fx-text-fill: #ffffff;
     -fx-border-width: 0px;
-    -fx-background-color: #39414E;
-    -fx-background-radius: 10px;
-    -fx-border-radius: 10px;
+    -fx-background-radius: 0px;
+    -fx-border-radius: 0px;
 }
+
 
 .button-submit:hover {
     -fx-background-color: #4E555E;

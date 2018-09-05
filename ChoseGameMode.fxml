@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="356.0" style="-fx-background-color: #4abdac;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tictactoe.ChoseGameModeController">
+   <children>
+      <Pane fx:id="topbar" layoutY="-1.0" prefHeight="30.0" prefWidth="354.0" style="-fx-background-color: #4abdac;" stylesheets="@../../../../Franzoesisch/src/franzoesisch/stylesheet.css">
+         <children>
+            <HBox alignment="CENTER_RIGHT" layoutX="279.0" prefHeight="30.0" prefWidth="74.0" spacing="5.0">
+               <children>
+                  <Button ellipsisString="" focusTraversable="false" mnemonicParsing="false" prefHeight="17.0" prefWidth="17.0" styleClass="apple-maximize" stylesheets="@../../../../Franzoesisch/src/franzoesisch/stylesheet.css">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Button>
+                  <Button ellipsisString="" focusTraversable="false" mnemonicParsing="false" onAction="#minimize" prefHeight="17.0" prefWidth="17.0" styleClass="apple-minimize" stylesheets="@../../../../Franzoesisch/src/franzoesisch/stylesheet.css">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Button>
+                  <Button ellipsisString="" focusTraversable="false" mnemonicParsing="false" onAction="#close" prefHeight="17.0" prefWidth="17.0" styleClass="apple-close" stylesheets="@../../../../Franzoesisch/src/franzoesisch/stylesheet.css">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </HBox>
+         </children></Pane>
+      <Button layoutX="53.0" layoutY="36.0" mnemonicParsing="false" onAction="#multiPlayer" prefHeight="163.0" prefWidth="250.0" style="-fx-background-color: #fc4a1a;" styleClass="button-submit" text="Multiplayer">
+         <font>
+            <Font name="Eras Bold ITC" size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="53.0" layoutY="222.0" mnemonicParsing="false" onAction="#singlePlayer" prefHeight="163.0" prefWidth="250.0" style="-fx-background-color: #fc4a1a;" styleClass="button-submit" text="Singleplayer">
+         <font>
+            <Font name="Eras Bold ITC" size="27.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
