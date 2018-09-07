@@ -13,5 +13,4 @@ import javafx.scene.control.Label;
  */
 public interface GameInterface {
     public void setOpponentsField(Label[] labels);
-    
 }

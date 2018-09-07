@@ -5,6 +5,7 @@
  */
 package tictactoe;
 
+import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,16 +18,19 @@ import javafx.stage.StageStyle;
  * @author Startklar
  */
 public class TicTacToe extends Application {
-    private static Stage stage;
+
+    private static Stage primarystage;
+    public int m;
+
     @Override
-    public void start(Stage stage) throws Exception {
-        this.stage = stage;
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+    public void start(Stage primarystage) throws Exception {
+        this.primarystage = primarystage;
+        Parent root = FXMLLoader.load(getClass().getResource("ChoseGameMode.fxml"));
         Scene scene = new Scene(root);
-        stage.initStyle(StageStyle.TRANSPARENT);
-        stage.show();
-        stage.setResizable(false);
-        stage.setScene(scene);
+        primarystage.initStyle(StageStyle.TRANSPARENT);
+        primarystage.show();
+        primarystage.setResizable(false);
+        primarystage.setScene(scene);
     }
 
     /**
@@ -34,11 +38,16 @@ public class TicTacToe extends Application {
      */
     public static void main(String[] args) {
         launch(args);
-        
+
     }
+
     
+
     public static Stage getStage() {
-        return stage;
+        return primarystage;
     }
+
+    
+
     
 }
