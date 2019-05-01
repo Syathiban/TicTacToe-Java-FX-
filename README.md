@@ -4,4 +4,4 @@ A Java Fx Program wich lets you play a round of simple Tic Tac Toe against the C
 
 # Class Diagram:
 
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/Syathiban/TicTacToe-Java-FX-/blob/master/Diagram.jpg)
